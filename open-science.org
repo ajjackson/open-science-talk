@@ -1,0 +1,124 @@
+#    -*- mode: org -*-
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: reveal_title_slide:"<h2>%t</h2><h2>%a</h2><h3>%e</h3>"
+#+OPTIONS: toc:nil
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_MARGIN: 0.2
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: none
+#+REVEAL_THEME: solarized
+#+REVEAL_HLEVEL: 1
+#+REVEAL_EXTRA_CSS: ./presentation.css
+#+BEAMER_FRAME_LEVEL: 2
+
+#+TITLE: Open science and sustainable software
+#+AUTHOR: Adam J. Jackson
+#+EMAIL: adam.jackson@ucl.ac.uk
+
+* COMMENT Structure thoughts
+
+  - Need a strong opener
+
+** Open Science
+
+  - "Open science" section can cover
+    - Popper?
+      - Popper's thesis re falsifiability relates to how experiments
+        are designed and what they cover
+      - Reproducibility seems to be taken as a given?
+    - Reproducibility
+      - vs replicability, re-use etc.
+    - Retraction Watch, Stapel, superconductors...
+*** Outline
+    - EU definition
+    - Justification: Public money!
+      - Should be able to learn and build on publically-funded research
+      - Should be confident in quality of work
+      - Research should be efficient -> lower overall cost to public
+    - Standard: N Rs (where N is 2, 3, 4 or 5)
+      - Rerun (same people, tinker with setup)
+      - Repeat (same people, same setup)
+      - Replicate (different people, same setup)
+      - Reproduce (different people, different setup)
+      - Reuse (similar setup, different experiment)
+
+        https://www.slideshare.net/carolegoble/what-is-reproducibility-gobleclean Prof Carole Goble 2016 slides
+        https://www.slideshare.net/gramian/rrr-replicability-reproducibility-reusability Christian Himpe, MPI
+
+    - Stick to two for now
+      - Reproducibility
+        - Confidence in findings
+      - Re-use
+        - Improve productivity
+
+    - FAIR principles
+      - Research data has different problems
+
+    - Expectations are rising
+      - Journal policies
+      - But people are struggling to adapt to these new policies...
+
+    - Some general key principles
+      - Reproducibility of experimental setups will always be tricky...
+      - But no such excuse for analysis steps
+      - Always keep raw data as well as processed forms
+      - When processing data, consider
+        a) Can I explain this?
+        b) Can I automate it?
+      - Avoid "locked-in" file formats
+      - Use metadata and comments
+
+** Sustainable software
+
+*** Notes
+   - Sustainable Software
+
+     - Software is important and growing part of research
+     - Even more so if you consider all analysis pipelines to be
+       software. Are spreadsheets software?
+     - Open Source -> FOSS
+       - Open source enables /transparency/
+         - Open source analysis makes reproducibility possible, but
+           disincentivises if you can't then /build on it/
+       - FOSS is really about the /license/
+       - license enable /re-use/
+
+*** Outline
+    - Hettrick stats: researchers increasingly depend on software
+    - Maybe we should consider data analysis steps and spreadsheets as
+      "software"...
+    - What is Open Source?
+      - Code available - transparency
+      - This enables replication
+      - For re-use, need permission to build on code: FOSS license
+      - For replication, is may help if the code is understandable and
+        easy to work with...
+    - Sustainable software is /maintainable/
+      - Version control
+      - Documentation
+      - Automated testing
+    - Community projects
+      - Ambitious projects are better with friends
+
+* Introduction
+
+* Open Science
+
+** Open Science
+   #+BEGIN_QUOTE
+   Open Science is scholarly research that is collaborative,
+   transparent and reproducible and whose outputs are publicly
+   available.
+
+   - [[https://publications.europa.eu/en/publication-detail/-/publication/5b05b687-907e-11e8-8bc1-01aa75ed71a1][Some EU report]]
+   #+END_QUOTE
+
+** Science
+
+   - Karl Popper (photo)
+   - Scientific theories are /falsifiable/
+
+* Sustainable Software
