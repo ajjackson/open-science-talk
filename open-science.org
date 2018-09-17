@@ -178,4 +178,73 @@
 
    PAPER/QUOTES ON SOFTWARE ACCESS REQUESTS
 
+
+** Good practice
+   - Keep raw data
+   - Automate everything
+   - Avoid proprietary data formats
+   - Keep metadata
+
 * Sustainable Software
+
+** Research software
+   - 92% of academics use research software
+   - 69% say that their research would not be practical without it
+   - 56% develop their own software 
+     - (worryingly, 21% of those have no training in software development)
+
+   (Simon Hettrick, Deputy Director of SSI)
+   https://www.software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers
+
+   #+REVEAL: split
+    [[./images/ssi-logo.png]]
+
+    - Supporting research software community in the UK
+    - "Better software, better research"
+    - Training (partnership with Software Carpentry)
+    - Advocacy/policy (Research Software Engineers)
+    - Fellowship programme (this includes most of today's speakers!)
+
+   #+REVEAL: split
+
+   Spreadsheets are software
+
+   #+REVEAL: split
+
+   Spreadsheets are (terrible) software
+
+   #+REVEAL: split
+
+   Spreadsheets are (terrible) software
+
+   - Mix data and processing
+   - Process is obscured as data cells and code cells look the same
+
+   - ECONOMICS/AUSTERITY SPREADSHEET
+
+** Open Source
+   - Many programming languages (C, C++, Fortran, ...) are translated
+     (compiled) to /machine code/
+   - Software that is distributed as a machine code "binary" cannot be
+     inspected
+   - It is a "black box"
+   - Open Source  means that the code can be examined
+   - Some programs (e.g. Python, shell scripts) are not compiled before they are run
+     - The source can always be examined
+
+   #+REVEAL: split
+   - Open source in a literal sense helps reproducibility:
+     - exact process is exposed
+     - implementation details can be identified/test/replicated
+       - including bugs!
+
+   - But licensing also matters
+
+   - What is Open Source?
+     - Code available - transparency
+     - This enables replication
+     - For re-use, need permission to build on code: FOSS license
+     - For replication, is may help if the code is understandable and
+       easy to work with...
+
+   #+REVEAL: split
