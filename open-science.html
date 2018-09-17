@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Open science and sustainable software</title>
+<meta name="author" content="(Adam J. Jackson)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/solarized.css" id="theme"/>
+
+<link rel="stylesheet" href="./presentation.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Open science and sustainable software</h2><h2>Adam J. Jackson</h2><h3><a href="mailto:adam.jackson@ucl.ac.uk">adam.jackson@ucl.ac.uk</a></h3>
+</section>
+
+<section>
+<section id="slide-orgf8aa531">
+<h2 id="orgf8aa531">Open Science</h2>
+<div class="outline-text-2" id="text-orgf8aa531">
+</div>
+</section>
+<section id="slide-orgdbcd225">
+<h3 id="orgdbcd225">Open Science</h3>
+<blockquote nil>
+<p>
+Open Science is scholarly research that is collaborative,
+transparent and reproducible and whose outputs are publicly
+available.
+</p>
+
+<ul>
+<li><a href="https://publications.europa.eu/en/publication-detail/-/publication/5b05b687-907e-11e8-8bc1-01aa75ed71a1">Some EU report</a></li>
+
+</ul>
+</blockquote>
+
+</section>
+<section >
+
+<ul>
+<li>In science we are usually building on previous work</li>
+<li>It sucks when we can't access that work!
+<ul>
+<li>Papers</li>
+<li>Data</li>
+<li>Models</li>
+
+</ul></li>
+<li>For our funders, this is <i>inefficient</i></li>
+
+</ul>
+
+</section>
+<section >
+
+<ul>
+<li>UKRI (body including EPSRC, AHRC, Innovate UK, STFC&#x2026;) expects
+that articles funded by research councils will be freely
+available online</li>
+<li><p>
+EPSRC requires a Data Access Statement in publications
+</p>
+<blockquote nil>
+<p>
+&#x2026; publicly funded research data should generally be made as widely
+and freely available as possible in a timely and responsible
+manner
+</p>
+</blockquote></li>
+
+</ul>
+
+</section>
+<section id="slide-orga248ce3">
+<h3 id="orga248ce3">Some vocab</h3>
+<ul>
+<li>N 'R's (where N is 2, 3, 4 or 5)
+<ul>
+<li>Rerun (same people, tinker with setup)</li>
+<li>Repeat (same people, same setup)</li>
+<li>Replicate (different people, same setup)</li>
+<li>Reproduce (different people, different setup)</li>
+<li>Reuse (similar setup, different experiment)</li>
+
+</ul></li>
+<li><i>Some other presentations on this topic</i>
+<ul>
+<li><a href="https://www.slideshare.net/carolegoble/what-is-reproducibility-gobleclean">Carole Goble slides</a></li>
+<li><a href="https://www.slideshare.net/gramian/rrr-replicability-reproducibility-reusability">Christian Himpe, MPI</a></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-orgbc8a170">
+<h3 id="orgbc8a170">Less vocab</h3>
+<ul>
+<li>Reproducible outputs
+<ul>
+<li>Improve <i>quality</i> of research</li>
+
+</ul></li>
+<li>Reusable outputs
+<ul>
+<li>Improve <i>efficiency</i> of research</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org4c8f839">
+<h3 id="org4c8f839">Reproducibility</h3>
+<ul>
+<li>Provide sufficient information for others to reproduce results</li>
+<li>This should be the minimum standard for a scientific paper&#x2026;</li>
+<li>In practice it's not easy!
+<ul>
+<li><a href="https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970">Survey results</a></li>
+<li><a href="http://www.sciencemag.org/news/2017/01/rigorous-replication-effort-succeeds-just-two-five-cancer-papers">Cancer studies</a></li>
+<li><a href="https://retractionwatch.com/">Retracted papers</a></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org16d4b0f">
+<h3 id="org16d4b0f">Re-use</h3>
+<ul>
+<li>Data sharing practices vary pretty wildly between fields</li>
+<li>Some fields rely heavily on shared databases</li>
+<li>Obtaining paper results by email has mixed results</li>
+
+</ul>
+
+</section>
+<section id="slide-orga4b3fa8">
+<h3 id="orga4b3fa8">FAIR</h3>
+<p>
+Principles for "scientific data management" 
+ <a href="https://www.nature.com/articles/sdata201618">https://www.nature.com/articles/sdata201618</a>
+</p>
+
+<ul>
+<li>Findable
+<ul>
+<li>Use persistent identifier</li>
+<li>Use metadata</li>
+
+</ul></li>
+<li>Available
+<ul>
+<li>Retrievable by an open standard protocal</li>
+
+</ul></li>
+<li>Interoperable
+<ul>
+<li>Format data in a formal, accessible way</li>
+
+</ul></li>
+<li>Reusable
+<ul>
+<li>"richly described" and using community standards</li>
+<li>Usage license and detailed provenance</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org87cdde5">
+<h3 id="org87cdde5">Journal policies</h3>
+<ul>
+<li>In response to research council pressure, journals are requiring more</li>
+
+<li><p>
+<i>Science</i> data/code availability policy (2011)
+</p>
+<blockquote nil>
+<p>
+All data necessary to understand, assess, and extend the
+conclusions of the manuscript must be available to any reader of
+Science. All computer codes involved in the creation or analysis
+of data must also be available to any reader of Science. After
+publication, all reasonable requests for data and materials must
+be fulfilled. Any restrictions on the availability of data, codes,
+or materials, including fees and original data obtained from other
+sources (Materials Transfer Agreements), must be disclosed to the
+editors upon submission…
+</p>
+</blockquote></li>
+
+</ul>
+
+</section>
+<section >
+
+<p>
+In a recent study researchers requested data and code from a
+random sample of 204 <i>Science</i> papers&#x2026;
+</p>
+
+<p>
+<a href="https://doi.org/10.1073/pnas.1708290115">https://doi.org/10.1073/pnas.1708290115</a>
+</p>
+
+</section>
+<section >
+
+<blockquote nil>
+<p>
+When you approach a PI for the source codes and raw data, you
+better explain who you are, whom you work for, why you need the
+data and what you are going to do with it.
+</p>
+</blockquote>
+<blockquote nil>
+<p>
+I have to say that this is a very unusual request without any
+explanation! Please ask your supervisor to send me an email with a
+detailed, and I mean detailed, explanation.
+</p>
+</blockquote>
+</section>
+<section >
+<blockquote nil>
+<p>
+Thank you for your interest in our paper. For the [redacted]
+calculations I used my own code, and there is no public version of
+this code, which could be downloaded. Since this code is not very
+user-friendly and is under constant development I prefer not to
+share this code.
+</p>
+</blockquote>
+<blockquote nil>
+<p>
+R is a free software package available at www.r-project.org/ I used
+R for the [redacted] models. As you probably know, [redacted] and
+[redacted] are quite complicated. But I don’t have to tell you that
+given that you are a statistics student! I used Matlab for the
+geometry.
+</p>
+</blockquote>
+
+</section>
+<section >
+<p>
+The policy has been tweaked, but was that really the problem?
+</p>
+
+
+<div class="figure">
+<p><img src="./images/sciencemag-policy.png" alt="sciencemag-policy.png" />
+</p>
+</div>
+
+
+</section>
+<section id="slide-orge89851f">
+<h3 id="orge89851f">Good practice</h3>
+<ul>
+<li>Keep raw data</li>
+<li>Keep metadata</li>
+<li>Avoid proprietary data formats</li>
+<li>Automate everything</li>
+<li>Host it somewhere
+<ul>
+<li>Code: Github, Bitbucket, Gitlab&#x2026;</li>
+<li>Data: Zenodo, Figshare, institutional repo, publisher&#x2026;</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org0425766">
+<h2 id="org0425766">Sustainable Software</h2>
+<div class="outline-text-2" id="text-org0425766">
+</div>
+</section>
+<section id="slide-org7cfa177">
+<h3 id="org7cfa177">Research software</h3>
+<ul>
+<li>92% of academics use research software</li>
+<li>69% say that their research would not be practical without it</li>
+<li>56% develop their own software 
+<ul>
+<li>(worryingly, 21% of those have no training in software development)</li>
+
+</ul></li>
+
+</ul>
+
+<p>
+(Simon Hettrick, Deputy Director of SSI)
+<a href="https://www.software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers">https://www.software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers</a>
+</p>
+
+</section>
+<section >
+
+<div class="figure">
+<p><img src="./images/ssi-logo.png" alt="ssi-logo.png" />
+</p>
+</div>
+
+<ul>
+<li>Supporting research software community in the UK</li>
+<li>"Better software, better research"</li>
+<li>Training (partnership with Software Carpentry)</li>
+<li>Advocacy/policy (Research Software Engineers)</li>
+<li>Fellowship programme (this includes most of today's speakers!)</li>
+
+</ul>
+
+</section>
+<section >
+
+<p>
+Spreadsheets are software
+</p>
+
+</section>
+<section >
+
+<p>
+Spreadsheets are (terrible) software
+</p>
+
+</section>
+<section >
+
+<p>
+Spreadsheets are (terrible) software
+</p>
+
+<ul>
+<li>Mix data and processing</li>
+<li>Data cells and code cells look the same</li>
+<li>Errors can be hard to spot even in <a href="https://www.washingtonpost.com/news/wonk/wp/2013/04/16/is-the-best-evidence-for-austerity-based-on-an-excel-spreadsheet-error/">influential studies</a></li>
+
+</ul>
+
+</section>
+<section id="slide-org4815a39">
+<h3 id="org4815a39">Open Source</h3>
+<ul>
+<li>Many programming languages (C, C++, Fortran, &#x2026;) are translated
+(compiled) to <i>machine code</i></li>
+<li>Software that is distributed as a machine code "binary" cannot
+easily be inspected</li>
+<li>Reading machine code is serious hacker territory</li>
+
+</ul>
+
+<div class="column" style="float:left; width: 50%">
+
+<div class="figure">
+<p><img src="./images/hackers.jpg" alt="hackers.jpg" width="60%" />
+</p>
+</div>
+
+<p>
+Hackers (1995)
+</p>
+</div>
+<div class="column" style="float:left; width: 50%">
+
+<div class="figure">
+<p><img src="./images/Cypher.jpg" alt="Cypher.jpg" width="60%" />
+</p>
+</div>
+
+<p>
+The Matrix (1999)
+</p>
+</div>
+
+
+
+</section>
+<section >
+<ul>
+<li>Open Source  means that the code can be examined as written</li>
+<li>Some programs (e.g. Python, shell scripts) are not compiled before they are run
+<ul>
+<li>The source can <i>always</i> be examined</li>
+
+</ul></li>
+<li>Open source in a literal sense helps reproducibility:
+<ul>
+<li>exact process is exposed</li>
+<li>implementation details can be identified/test/replicated
+<ul>
+<li>including bugs!</li>
+
+</ul></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section >
+
+<ul>
+<li>Open source is not enough! Licensing matters.</li>
+<li>"Free Open Source Software (FOSS)" is
+<ul>
+<li>Free as in beer (gratis)</li>
+<li>Free as in <i>Freedom</i> (libre)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section >
+<div class="column" style="float:left; width: 50%">
+
+<div class="figure">
+<p><img src="./images/rms.jpg" alt="rms.jpg" width="60%" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<blockquote nil>
+<p>
+If the users don't control the program, the program controls the
+users. With proprietary software, there is always some entity, the
+"owner" of the program, that controls the program and through it,
+exercises power over its users. A nonfree program is a yoke, an
+instrument of unjust power.
+</p>
+</blockquote>
+<p>
+&#x2013; Richard Stallman
+</p>
+
+</div>
+</section>
+<section >
+
+<p>
+Politics aside&#x2026;
+</p>
+
+<ul>
+<li>FOSS licenses give us the right to build on software and distribute it ourselves</li>
+<li>This is <i>essential</i> for community development of a codebase</li>
+<li>In practice good changes can make it "upstream" or form a new code</li>
+<li>Hybrids are possible: paid academic license, community development</li>
+
+</ul>
+
+<p>
+<a href="https://choosealicense.com/">https://choosealicense.com/</a>
+</p>
+
+</section>
+<section id="slide-orgc469ed6">
+<h3 id="orgc469ed6">Sustainable software</h3>
+<p>
+Sustainable software is <i>maintainable</i>
+</p>
+
+<ul>
+<li>Coding style</li>
+<li>Version control</li>
+<li>Documentation</li>
+<li>Testing</li>
+<li>License</li>
+<li>Enable contributions</li>
+
+</ul>
+
+</section>
+<section id="slide-orgdf9b5db">
+<h3 id="orgdf9b5db">Documentation</h3>
+<p>
+Documentation is the most important thing not on today's agenda
+</p>
+
+<p>
+Watch Daniele Procida's amazing talk about documentation
+</p>
+<ul>
+<li>Pycon video: <a href="https://www.youtube.com/watch?v=azf6yzuJt54">https://www.youtube.com/watch?v=azf6yzuJt54</a></li>
+<li>Blog version <a href="https://www.divio.com/en/blog/documentation/">https://www.divio.com/en/blog/documentation/</a></li>
+
+</ul>
+
+</section>
+<section id="slide-org57d7d93">
+<h3 id="org57d7d93">The secret method for a professional-looking project</h3>
+<ul>
+<li class="fragment appear">Steal stuff you like from other projects</li>
+<li class="fragment appear">Watch the issue tracker or mailing list of a project you care
+about and see how it develops</li>
+<li class="fragment appear">Use the same toolchain as projects you find easy to work with and
+copy their configurations</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org4341468">
+<h2 id="org4341468">Wrap-up</h2>
+<div class="outline-text-2" id="text-org4341468">
+</div>
+</section>
+<section id="slide-org84d2bbf">
+<h3 id="org84d2bbf">Summary</h3>
+<ul>
+<li class="fragment appear">Publicly-funded science wants to be open</li>
+<li class="fragment appear">Working openly is good for quality</li>
+<li class="fragment appear">Always keep raw data</li>
+<li class="fragment appear">Use standard formats</li>
+<li class="fragment appear">Automate things</li>
+<li class="fragment appear">Make stuff useable by other people</li>
+<li class="fragment appear">You'll thank yourself for that in a year's time</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="https://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+width: 1200,
+height: 800,
+margin: 0.20,
+minScale: 0.50,
+maxScale: 2.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
