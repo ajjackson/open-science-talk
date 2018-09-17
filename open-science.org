@@ -103,6 +103,15 @@
     - Community projects
       - Ambitious projects are better with friends
 
+** Summary
+
+   - Publicly-funded science wants to be open
+   - Working openly is good for quality
+   - Always keep raw data
+   - Automation is documentation
+   - Make stuff useable by other people
+   - You'll thank yourself for that in a year's time
+
 * Introduction
 
 * Open Science
@@ -116,9 +125,57 @@
    - [[https://publications.europa.eu/en/publication-detail/-/publication/5b05b687-907e-11e8-8bc1-01aa75ed71a1][Some EU report]]
    #+END_QUOTE
 
-** Science
+** Open Science
+   - In science we are usually building on previous work
+   - It sucks when we can't access that work!
+     - Papers
+     - Data
+     - Models
+   - For our funders, this is /inefficient/
 
-   - Karl Popper (photo)
-   - Scientific theories are /falsifiable/
+** Open Science
+   - Openness increasingly required by research councils
+   - Open Access policies
+   - EPSRC requires a Data Access Statement in publications
+
+** Some vocab
+    - N 'R's (where N is 2, 3, 4 or 5)
+      - Rerun (same people, tinker with setup)
+      - Repeat (same people, same setup)
+      - Replicate (different people, same setup)
+      - Reproduce (different people, different setup)
+      - Reuse (similar setup, different experiment)
+    - /Some other presentations on this topic/
+      - [[https://www.slideshare.net/carolegoble/what-is-reproducibility-gobleclean][Carole Goble slides]]
+      - [[https://www.slideshare.net/gramian/rrr-replicability-reproducibility-reusability][Christian Himpe, MPI]]
+
+** Less vocab
+    - Reproduce
+      - Improve /quality/ of research
+    - Reuse
+      - Improve /efficiency/ of research
+
+** Reproducibility
+   - Provide sufficient information for others to reproduce results
+   - This should be the minimum standard for a scientific paper...
+   - In practice it's not easy!
+     - Survey results
+     - Cancer studies
+     - Retracted papers
+
+** Re-use
+   - Data sharing practices vary pretty wildly between fields
+
+** Final Acronym
+   - FAIR principles for Research Data
+
+** Journal policies
+   - In response to research council pressure, journals are requiring more
+   - Policy for Science (HIGHLIGHT DOC)
+
+** Journal policies
+   In practice, change will take time!
+
+   PAPER/QUOTES ON SOFTWARE ACCESS REQUESTS
 
 * Sustainable Software
