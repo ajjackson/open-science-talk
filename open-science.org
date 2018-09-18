@@ -6,7 +6,7 @@
 #+OPTIONS: toc:nil
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_MARGIN: 0.2
-#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MIN_SCALE: 0.2
 #+REVEAL_MAX_SCALE: 2.5
 #+REVEAL_TRANS: none
 #+REVEAL_THEME: solarized
@@ -113,6 +113,36 @@
    - You'll thank yourself for that in a year's time
 
 
+** About me
+   - MEng chemical engineering at University of Bath (2006-2011)
+   - MRes, PhD in Sustainable Chemical Technologies (2012-2016)
+     - Thesis on /ab initio/ thermodynamics for solar absorber
+   - Post-doc in UCL Chemistry (Scanlon Materials Theory Group)
+     - Working on novel transparent conductors
+     - Use significant amounts of UK supercomputer time
+
+** About my programming
+   - Briefly exposed to BASIC at school
+   - Crash-course in Fortran in 2006
+   - Used some Matlab in undergrad
+   - Self-taught Python since around 2011
+   - Tinkered with some other stuff (C, Lisp, Julia, ...)
+
+   #+REVEAL: split
+
+   - Never had a structured course beyond language basics
+   - Never been mentored by an experienced programmer
+
+** Projects
+   
+   - [[https://github.com/ajjackson]]
+   - https://gitlab.com/ase/ase
+
+   Recently involved in two "code papers":
+   SUMO JOSS
+   GALORE JOSS
+
+
 * Open Science
 
 ** Open Science
@@ -134,6 +164,12 @@
    - For our funders, this is /inefficient/
 
    #+REVEAL: split
+   [[./images/science-scheme1.png]]
+   #+REVEAL: split
+
+   [[./images/science-scheme2.png]]
+   #+REVEAL: split
+
 
    - UKRI (body including EPSRC, AHRC, Innovate UK, STFC...) expects
      that articles funded by research councils will be freely
@@ -171,9 +207,13 @@
      - [[https://retractionwatch.com/][Retracted papers]]
 
 ** Re-use
-   - Data sharing practices vary pretty wildly between fields
-   - Some fields rely heavily on shared databases
-   - Obtaining paper results by email has mixed results
+   - Paper outputs: numbers are better than plots
+   - Databases: one large consistent set or aggregate of many
+   - Software: building powerful code takes time, should be /generalised/
+
+   - As a "re-user", the hardest part can be obtaining outputs
+     - Available on web :-)
+     - "Available by request" :-(
 
 ** FAIR 
    Principles for "scientific data management" 
@@ -268,13 +308,14 @@
    https://www.software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers
 
    #+REVEAL: split
+   #+ATTR_HTML: :width 50%
     [[./images/ssi-logo.png]]
 
     - Supporting research software community in the UK
     - "Better software, better research"
     - Training (partnership with Software Carpentry)
     - Advocacy/policy (Research Software Engineers)
-    - Fellowship programme (this includes most of today's speakers!)
+    - Fellowship programme (this includes some of today's speakers!)
 
    #+REVEAL: split
 
@@ -291,6 +332,8 @@
    - Mix data and processing
    - Data cells and code cells look the same
    - Errors can be hard to spot even in [[https://www.washingtonpost.com/news/wonk/wp/2013/04/16/is-the-best-evidence-for-austerity-based-on-an-excel-spreadsheet-error/][influential studies]]
+   - Difficult to document
+   - Difficult to test
 
 ** Open Source
    - Many programming languages (C, C++, Fortran, ...) are translated
@@ -351,6 +394,9 @@
 
    Politics aside...
 
+   - Default copyright status:
+     - I have no right to distribute your code
+     - Neither of us has the right to distribute my modified version
    - FOSS licenses give us the right to build on software and distribute it ourselves
    - This is /essential/ for community development of a codebase
    - In practice good changes can make it "upstream" or form a new code
@@ -362,12 +408,12 @@
 
    Sustainable software is /maintainable/
 
+   - License
    - Coding style
    - Version control
    - Documentation
    - Testing
-   - License
-   - Enable contributions
+   - Invite contributions
 
 ** Documentation
 
@@ -379,6 +425,7 @@
 
 ** The secret method for a professional-looking project
    #+ATTR_REVEAL: :frag (appear)
+   - Use other projects (instead of reinventing the wheel)
    - Steal stuff you like from other projects
    - Watch the issue tracker or mailing list of a project you care
      about and see how it develops
